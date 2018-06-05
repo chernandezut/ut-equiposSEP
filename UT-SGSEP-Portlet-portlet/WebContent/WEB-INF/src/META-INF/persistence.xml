@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="UT-SGSEP-Portlet-portlet" transaction-type="RESOURCE_LOCAL">
+		<class>sv.com.ut.models2.ActActividad</class>
+		<class>sv.com.ut.models2.AdjArchivoadjunto</class>
+		<class>sv.com.ut.models2.AppActividadporproyecto</class>
+		<class>sv.com.ut.models2.EppEtapaporproyecto</class>
+		<class>sv.com.ut.models2.EtaEtapa</class>
+		<class>sv.com.ut.models2.NotNota</class>
+		<class>sv.com.ut.models2.PlaPlantilla</class>
+		<class>sv.com.ut.models2.PppPlantillaporproyecto</class>
+		<class>sv.com.ut.models2.ProProyecto</class>
+		<class>sv.com.ut.models2.RolRol</class>
+		<class>sv.com.ut.models2.Tpr_tipoProyecto</class>
+		<class>sv.com.ut.models2.UsrUsuario</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/Sep_Ut"/>
+			<property name="javax.persistence.jdbc.user" value="Admin"/>
+			<property name="javax.persistence.jdbc.password" value="Admin"/>
+		</properties>
+	</persistence-unit>
+</persistence>

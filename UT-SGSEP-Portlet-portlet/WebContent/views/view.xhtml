@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<f:view
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+	<h:head />
+	<h:body>
+		<h:outputText value="#{i18n['UT-SGSEP-Portlet-hello-world']}" />
+	package org.primefaces.showcase.view.data.datatable;
+ 
+import java.io.Serializable;
+import java.util.List;
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.ViewScoped;
+import org.primefaces.showcase.domain.Car;
+import org.primefaces.showcase.service.CarService;
+ 
+@ManagedBean(name="dtPaginatorView")
+@ViewScoped
+public class PaginatorView implements Serializable {
+     
+    private List<Car> cars;
+     
+    @ManagedProperty("#{carService}")
+    private CarService service;
+ 
+    @PostConstruct
+    public void init() {
+        cars = service.createCars(50);
+    }
+     
+    public List<Car> getCars() {
+        return cars;
+    }
+ 
+    public void setService(CarService service) {
+        this.service = service;
+    }
+}
+	
+	
+	</h:body>
+
+</f:view>
